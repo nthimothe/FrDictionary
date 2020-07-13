@@ -36,12 +36,12 @@ Compile and run the program and check out the sample dictionary that the program
 Enjoy! 
 
 ## Screenshots
-![Screenshot1](https://github.com/nthimothe/Projects/blob/master/FrDictionary/Screenshots/exampleUsage.png)
+![Screenshot1](https://github.com/nthimothe/FrDictionary/blob/master/Screenshots/exampleUsage.png)
 
 Note the usage of the `show`, `count`, `lookup`, and `kill` commands!
 The next time you run the program, your old dictionary will automatically load!
 
-![Screenshot2](https://github.com/nthimothe/Projects/blob/master/FrDictionary/Screenshots/automaticLoad.png)
+![Screenshot2](https://github.com/nthimothe/FrDictionary/blob/master/Screenshots/automaticLoad.png)
 
 
 ## Notes
