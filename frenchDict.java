@@ -29,23 +29,20 @@ class frenchDict{
 	//split string into array
 	//Key is what's before the : and the definition is everything after
 	String[] keyValue = pair.split(":");
-	/*
-	 *Precaution that I noticed I should take after running the program:
-	 *if you ran the program with "::" as input it would crash b/c
-	 *the array was empty and i was trying to access first element
-	 *Essentially the array is not empty then I can access my K
-	*/
+
 	//if there is a first value in the array, then it's the word, if not there is no word
 	if (keyValue.length != 0)
 	    word = keyValue[0];
-	else 
-	    word = "";
+	else word = "";
+
 	//if we have a second thing in the array, then it's the definition, else there is none
 	if (keyValue.length > 1)
 	    def = keyValue[1];
-	else
-	    def = "";
+	else def = "";
+
+	// if there is a word and no definition, then it is a command
 	word = word.toLowerCase();	
+
 	switch (word)
 	    {
 	    case "kill":
@@ -85,7 +82,6 @@ class frenchDict{
 		boolean isAdded = addToDict(word,def); 
 		if (!isAdded)
 		    promptSearch(word);
-		//		break;
 	    }
     }
 
@@ -101,26 +97,22 @@ class frenchDict{
 	    //entrySet is the Set of Entries of K,V
 	    for (Map.Entry<String,Stack<String>> entry : saving.entrySet()){
 		String current = entry.getValue().toString();
-		//we need to remove the brackets around the elements
-		//of our stack, 1 all the way up to + including current.length-2, so that when we 
-		// don't have to do that work when we read it!
-		//we need that colon for when we read it back!
+		// remove the brackets around the elements of our stack, 1 all the way up to + including current.length-2
+		// we need colon for when we read it back
 		eachLine = entry.getKey() + ":" + current.substring(1, current.length()-1) + "\n";
 		bufferWrite.write(eachLine);
 	    }
-	    //always close our files
 	    bufferWrite.close();
 	} catch (IOException e){
-	    //helps the programmer to understand where the actual problem occurred
-	    //it helps to trace the exception. cannot print void types! : print(e...) X
 	    e.printStackTrace();
 	}
+
     }
 
     //fileName is our parameter just in case we have a dictionary we want to load    
     private void load(String fileName){
 	//I don't want to use Scanner because I dont want to pass the file in 
-	// as input to the program. I need it to automatically load
+	//as input to the program. I need it to automatically load
 	if (fileName == null)
 	    fileName = "_private.txt";
 	String each;
@@ -141,7 +133,6 @@ class frenchDict{
 	    bufferRead.close();
 	} catch (FileNotFoundException fnfe){
 	} catch(IOException ioe){
-	    //helps the programmer to understand where the actual problem occurred
 	    ioe.printStackTrace();
 	}
     }
@@ -153,7 +144,7 @@ class frenchDict{
 	//if our definition that we defined in our decide method is not empty then we can add to dict
 	if (!(def.isEmpty())) {
 	    String[] definitionArray = def.split(",");
-	    //if it contains the key, the update it's definition by
+	    //if it contains the key, the update its definition by
 	    //1) getting its definitions, 2) adding another one, 
 	    //3) updating the map
 	    if (map.containsKey(word)){
@@ -188,6 +179,8 @@ class frenchDict{
 	}
 	return false;
     }
+
+
     public void removeWord(){
 	Scanner s = new Scanner(System.in);
 	System.out.println(OPEN_BOLD + "Which word would you like to remove?" + CLOSE_BOLD);
@@ -216,7 +209,6 @@ class frenchDict{
 		    removeInd =  s.nextInt(); // what if there is an InputMM exception? I need a try,catch
 		    count++;
 		} catch (InputMismatchException e){
-		    //this clears out the scanner?
 		    s.next();
 		}
 	    } while (removeInd > removed.size() || removeInd <= 0);
@@ -240,6 +232,7 @@ class frenchDict{
 	    }
 	}
     }
+
     //prompt the user to remove a specific definition of whichever word (w/o removing the whole word)
     //the definition that we are removing is what we return
     public String removeDef(){
@@ -379,16 +372,13 @@ class frenchDict{
 		System.out.println(OPEN_BOLD + "I could not find " + "\"" + key + "\" in your dictionary." + CLOSE_BOLD);	    
 	}
     }
-    /*
-     *This method exists to convert? if the key is present without its gender then my key I typed in 
-     *gets corrected to the actual key. if the presentKey is empty at the end of the func, we didn't
-     *find it.
-     */
+
     private Vector<String> searching(String key){
 	Vector<String> presentKeys = new Vector<>();
 	//O(n), see if the keys of the map contain the key that the user is searching
 	for (Map.Entry<String,Stack<String>> entry : map.entrySet()){
 	    String currentKey = entry.getKey();
+	    //e.g. all words with the letter 'e' get added to the vector
 	    if (currentKey.contains(key)){
 		presentKeys.add(currentKey);
 	    }
@@ -522,7 +512,6 @@ class frenchDict{
 	Scanner s = new Scanner(System.in);
 	while (s.hasNext()){
 	    pair = s.nextLine();
-	    //if (pair.isEmpty()) continue;
 	    frenchDict.decide(pair);
 	}
     }
