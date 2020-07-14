@@ -1,7 +1,7 @@
 # (French) Dictionary !
 
-Use your own personalized version dictionary with ease.
-Store English words, French words, Spanish words, or whatever you like—even important information such as a namemapped to a phone number. 
+Use your own personal dictionary with ease.
+Store English words, French words, Spanish words and their definitions, or whatever you like—-even important information such as a named mapped to phone numbers. 
 
 Valid Commands include:
 
@@ -14,6 +14,8 @@ Valid Commands include:
 7. count (count all entries in your dictionary)
 8. mismatch (fun command)
 9. seriously (fun but dangerous command)
+10. help (display help message screen)
+
 Also,
 
 To add a word, simply type the word you'd like to define followed by a colon and the the word's definition. (e.g. pomme (f) : apple ... Justin : 000-000-0000). 
@@ -36,12 +38,12 @@ Compile and run the program and check out the sample dictionary that the program
 Enjoy! 
 
 ## Screenshots
-![Screenshot1](https://github.com/nthimothe/FrDictionary/blob/master/Screenshots/exampleUsage.png)
+![Screenshot1](https://github.com/nthimothe/Projects/blob/master/FrDictionary/Screenshots/exampleUsage.png)
 
 Note the usage of the `show`, `count`, `lookup`, and `kill` commands!
 The next time you run the program, your old dictionary will automatically load!
 
-![Screenshot2](https://github.com/nthimothe/FrDictionary/blob/master/Screenshots/automaticLoad.png)
+![Screenshot2](https://github.com/nthimothe/Projects/blob/master/FrDictionary/Screenshots/automaticLoad.png)
 
 
 ## Notes
