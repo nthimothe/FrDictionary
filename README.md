@@ -48,4 +48,4 @@ The next time you run the program, your old dictionary will automatically load!
 
 ## Notes
 
-This program is named frDictionary.java because I made it to help me with my vocabulary for French class. It should work with any language provided you can input the characters with your keyboard.  For hints on how to do this for French, check out MacOS French Keyboard Shortcuts.png.
+This program is named frDictionary.java because I made it to help me with my vocabulary for French class. It should work with any language provided that you can input the characters with your keyboard.  For hints on how to do this for French, check out "MacOS French Keyboard Shortcuts.png".
