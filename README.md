@@ -1,7 +1,7 @@
 # (French) Dictionary !
 
 Build and use your own personal dictionary with ease.
-Store English words, French words, Spanish words and their definitions, or whatever you like—-even important information such as a named mapped to phone numbers.
+Store English words, French words, Spanish words and their definitions, or whatever you like—-even important information such as names mapped to phone numbers.
 
 Valid Commands include:
 
