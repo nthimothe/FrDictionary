@@ -9,7 +9,7 @@ Valid Commands include:
 2. remove (remove a word and all its definitions from the dictionary)
 3. removedef (remove a definition from a specific word in the dictionary)
 4. kill (to safely save and quit the program)
-5. clear or reset (to remove all entries in your dictionary)
+5. clear or reset (remove all entries in your dictionary)
 6. show (show all entries in the dictionary)
 7. count (count all entries in your dictionary)
 8. mismatch (fun command)
