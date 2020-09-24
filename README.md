@@ -18,15 +18,17 @@ Valid Commands include:
 
 Also,
 
-To add a word, simply type the word you'd like to define followed by a colon and the the word's definition. (e.g. 
+To add a word, simply type the word you'd like to define followed by a colon and the the word's definition. 
+(e.g. 
 `pomme (f) : apple`
 `Justin : 000-000-0000`
-).
+)
 
-An alternative to explicitly typing 'lookup' for the `lookup` command is just typing the word or part of the word. (e.g. `Just` would yield the following
+An alternative to explicitly typing 'lookup' for the `lookup` command is just typing the word or part of the word.
+ (
+`Just` would yield the following...
 
 `The definition(s) of "justin" are: [000-000-0000]`
-
 )
 
 ## Running The Program
