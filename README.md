@@ -18,19 +18,22 @@ Valid Commands include:
 
 Also,
 
-To add a word, simply type the word you'd like to define followed by a colon and the the word's definition. (e.g. pomme (f) : apple ... Justin : 000-000-0000).
+To add a word, simply type the word you'd like to define followed by a colon and the the word's definition. (e.g. 
+`pomme (f) : apple`
+`Justin : 000-000-0000`
+).
 
 An alternative to explicitly typing 'lookup' for the `lookup` command is just typing the word or part of the word. (e.g. `Just` would yield the following
 
-The definition(s) of "justin" are: [000-000-0000]
+`The definition(s) of "justin" are: [000-000-0000]`
 
 )
 
 ## Running The Program
 * Download and install [Java](https://www.java.com/en/) on your machine if you don't already have it.
 * Navigate to the folder where you cloned or downloaded this repository.
-* Compile the program in the command line with `javac frenchDict.java`
-* Run the program with `java frenchDict` optionally passing in a dictionary that conforms to the formatting expectations of the program (e.g. `java frenchDict sampleDict.txt`). Take a look at sampleDict.txt if you're interested!
+* Compile the program on the command line with `javac frenchDict.java`
+* Run the program with `java frenchDict`, optionally passing in a dictionary that conforms to the formatting expectations of the program (e.g. `java frenchDict sampleDict.txt`). Take a look at sampleDict.txt if you're interested!
 
 It is important that each definition is separated by a newline in whatever file you in as a command line argument. The program automatically saves and loads your most recent dictionary if no command line argument is provided.
 
