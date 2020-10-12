@@ -37,7 +37,7 @@ An alternative to explicitly typing 'lookup' for the `lookup` command is just ty
 * Compile the program on the command line with `javac frenchDict.java`
 * Run the program with `java frenchDict`, optionally passing in a dictionary that conforms to the formatting expectations of the program (e.g. `java frenchDict sampleDict.txt`). Take a look at sampleDict.txt if you're interested!
 
-It is important that each definition is separated by a newline in whatever file you in as a command line argument. The program automatically saves and loads your most recent dictionary if no command line argument is provided.
+It is important that each definition is separated by a newline in whatever file you pass in as a command line argument. The program automatically saves and loads your most recent dictionary if no command line argument is provided.
 
 Compile and run the program and check out the sample dictionary that the program loads.
 Enjoy!
