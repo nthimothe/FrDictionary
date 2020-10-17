@@ -168,8 +168,8 @@ class frenchDict{
     // COMMAND: REMOVE    
     public void removeWord(){
 	Scanner s = new Scanner(System.in);
-	System.out.println(OPEN_BOLD + "Which word would you like to remove?" + CLOSE_BOLD);
-	String potential = s.nextLine();
+	System.out.print(OPEN_BOLD + "Which word would you like to remove? " + CLOSE_BOLD);
+	String potential = s.nextLine().trim();
 	//this method will remove a word and all its definitions IF it's present
 	ArrayList<String> removed = searching(potential);
 	int listSize = printKeys(removed);
@@ -187,9 +187,9 @@ class frenchDict{
 		try{
 		    //two different prompts so that the longer message is only displayed once
 		    if (count == 0)
-			System.out.println(OPEN_BOLD + "Please select the number that corresponds to the word you would like to remove." + CLOSE_BOLD);
+			System.out.print(OPEN_BOLD + "Please select the number that corresponds to the word you would like to remove: " + CLOSE_BOLD);
 		    else
-			System.out.println(OPEN_BOLD + "Please enter a valid number." + CLOSE_BOLD);
+			System.out.print(OPEN_BOLD + "Please enter a valid number: " + CLOSE_BOLD);
 		    removeInd =  s.nextInt(); // what if there is an InputMM exception? I need a try,catch
 		    count++;
 		} catch (InputMismatchException e){
@@ -213,7 +213,7 @@ class frenchDict{
 	Scanner s = new Scanner(System.in);
 	String removed = "";
 	// prompt
-	System.out.println(OPEN_BOLD + "First, specify the word in the dictionary." + CLOSE_BOLD);
+	System.out.print(OPEN_BOLD + "First, specify the word in the dictionary: " + CLOSE_BOLD);
 	String word = s.nextLine().trim();
 	// search
 	ArrayList<String> presentKeys = searching(word);
@@ -239,13 +239,14 @@ class frenchDict{
 	    do {
 		try {
 		    if (count == 0)
-			System.out.println(OPEN_BOLD + "Please enter the number that corresponds to the word you have in mind." + CLOSE_BOLD);
+			System.out.print(OPEN_BOLD + "Please enter the number that corresponds to the word you have in mind: " + CLOSE_BOLD);
 		    else
-			System.out.println(OPEN_BOLD + "Please enter a valid number." + CLOSE_BOLD);
+			System.out.print(OPEN_BOLD + "Please enter a valid number: " + CLOSE_BOLD);
 		    wordNum = s.nextInt();
-			count++;
+		    count++;
 		} catch (InputMismatchException e){
 		    s.next();
+		    count++;
 		}
 	    } while (wordNum > listSize || wordNum <= 0 );
 	    //once we are outside of the while loop, we have found an acceptable key
@@ -273,12 +274,13 @@ class frenchDict{
 	    //if the number the user enters is greater than my list, prompt again
 	    do{
 		try{
-		    if (count == 0)  System.out.println(OPEN_BOLD + "Which definition would you like to remove?" + CLOSE_BOLD);         
-		    else System.out.println(OPEN_BOLD + "Please enter a valid number." + CLOSE_BOLD);
+		    if (count == 0)  System.out.print(OPEN_BOLD + "Which definition would you like to remove? " + CLOSE_BOLD);         
+		    else System.out.print(OPEN_BOLD + "Please enter a valid number: " + CLOSE_BOLD);
 		    numRev = s.nextInt();
 		    count++;
 		} catch (InputMismatchException exception){
 		    s.next();
+		    count++;
 		}
 		//if the user does not enter an integer, prompt again
 	    } while  (numRev > wordDefs.size() || numRev <= 0);
@@ -320,7 +322,7 @@ class frenchDict{
 	// if the user doesn't provide a word, then prompt them
 	if (keep == null){
 	    Scanner s = new Scanner(System.in);
-	    System.out.println(OPEN_BOLD + "What word are you looking for?" + CLOSE_BOLD);
+	    System.out.print(OPEN_BOLD + "What word are you looking for? " + CLOSE_BOLD);
 	    key = s.nextLine().trim();
 	}
 	ArrayList<String> actualKeys = searching(key);
@@ -375,7 +377,7 @@ class frenchDict{
 	Scanner s = new Scanner(System.in);
 	Random obj = new Random();
 	System.out.print("\u26A0\u26A0\u26A0 Are you sure? ");
-	String answer = s.nextLine();
+	String answer = s.nextLine().trim();
 	if (answer.equals("y") || answer.contains("yes")){
 	    System.out.println("You asked! \uD83C\uDF02\uD83C\uDF00\uD83D\uDC7E\uD83D\uDE4A\uD83D\uDE0E\uD83C\uDF1E\uD83D\uDC13\uD83D\uDE09\uD83D\uDE05\uD83D\uDCE3\uD83D\uDCA2\uD83D\uDC30\uD83D\uDC2E\uD83D\uDC27\uD83C\uDFC1\uD83C\uDF88\u3030\u2714\u203C\uD83C\uDF02\uD83C\uDF00\uD83D\uDC7E\uD83D\uDE4A\uD83D\uDE0E\uD83C\uDF1E\uD83D\uDC13\uD83D\uDE09\uD83D\uDE05\uD83D\uDCE3\uD83D\uDCA2\uD83D\uDC30\uD83D\uDC2E\uD83D\uDC27\uD83C\uDFC1\uD83C\uDF88\u3030\u2714\u203C\uD83C\uDF02\uD83C\uDF00\uD83D\uDC7E\uD83D\uDE4A\uD83D\uDE0E\uD83C\uDF1E\uD83D\uDC13\uD83D\uDE09\uD83D\uDE05\uD83D\uDCE3\uD83D\uDCA2\uD83D\uDC30\uD83D\uDC2E\uD83D\uDC27\uD83C\uDFC1\uD83C\uDF88\u3030\u2714\u203C\uD83C\uDF02\uD83C\uDF00\uD83D\uDC7E\uD83D\uDE4A\uD83D\uDE0E\uD83C\uDF1E\uD83D\uDC13\uD83D\uDE09\uD83D\uDE05\uD83D\uDCE3\uD83D\uDCA2\uD83D\uDC30\uD83D\uDC2E\uD83D\uDC27\uD83C\uDFC1\uD83C\uDF88\u3030\u2714\u203C\uD83C\uDF02\uD83C\uDF00\uD83D\uDC7E\uD83D\uDE4A\uD83D\uDE0E\uD83C\uDF1E\uD83D\uDC13\uD83D\uDE09\uD83D\uDE05\uD83D\uDCE3\uD83D\uDCA2\uD83D\uDC30\uD83D\uDC2E\uD83D\uDC27\uD83C\uDFC1\uD83C\uDF88\u3030\u2714\u203C\uD83C\uDF02\uD83C\uDF00\uD83D\uDC7E\uD83D\uDE4A\uD83D\uDE0E\uD83C\uDF1E\uD83D\uDC13\uD83D\uDE09\uD83D\uDE05\uD83D\uDCE3\uD83D\uDCA2\uD83D\uDC30\uD83D\uDC2E\uD83D\uDC27\uD83C\uDFC1\uD83C\uDF88\u3030\u2714\u203C\uD83C\uDF02\uD83C\uDF00\uD83D\uDC7E\uD83D\uDE4A\uD83D\uDE0E\uD83C\uDF1E\uD83D\uDC13\uD83D\uDE09\uD83D\uDE05\uD83D\uDCE3\uD83D\uDCA2\uD83D\uDC30\uD83D\uDC2E\uD83D\uDC27\uD83C\uDFC1\uD83C\uDF88\u3030\u2714\u203C");
 	    int ranNum = obj.nextInt(1000000);
@@ -491,6 +493,7 @@ class frenchDict{
     //java's first argument is not the filename like in python and c!
     public static void main(String[] args){
 	frenchDict frenchDict = new frenchDict();
+	String ASK_INPUT = "--> ";
 	System.out.println(frenchDict.OPEN_BOLD + "Welcome to Your Dictionary!\n" + frenchDict.CLOSE_BOLD);
 	//if we get an array out of bounds exception, then let's just load our default
 	//file : _private.txt
@@ -499,9 +502,11 @@ class frenchDict{
 	System.out.println("Please enter a word and its definition followed by a colon!\n");
 	String pair;
 	Scanner s = new Scanner(System.in);
-	while (s.hasNext()){
+	System.out.print(ASK_INPUT);
+	while (s.hasNextLine()){
 	    pair = s.nextLine();
 	    frenchDict.decide(pair);
+	    System.out.print(ASK_INPUT);
 	}
     }
 }
